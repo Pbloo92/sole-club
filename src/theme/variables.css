@@ -1,0 +1,125 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f5f5;
+  background: #101010;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #101010;
+}
+
+button,
+a {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #ff3030;
+  color: #fff;
+}
+
+/* ENLACES */
+.nav-link {
+  color: #d4d4d4;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ff3030;
+}
+
+/* IMÁGENES DE PRODUCTOS */
+.product-image {
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+/* BOTONES */
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 14px 24px;
+  margin-block: 4px;
+  border-radius: 3px;
+  line-height: 1.3;
+}
+
+.filter-button {
+  min-height: 44px;
+  padding: 12px 22px;
+  margin: 3px;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+
+.menu-button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ff3030;
+  outline-offset: 4px;
+}
+
+/* MÓVILES */
+@media (max-width: 640px) {
+  .action-button {
+    padding: 13px 18px;
+  }
+
+  .filter-button {
+    padding: 11px 16px;
+  }
+}
+
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
